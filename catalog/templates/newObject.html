@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner object">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>New Object</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+					
+					<label for="extension">Extension:</label>
+					<textarea class="form-control" maxlength="15" rows="1" name="extension" placeholder="Extension of Object"></textarea>
+
+					<label for="accession">Accession:</label>
+					<textarea class="form-control" maxlength="15" rows="1" name="accession" placeholder="Accession of Object"></textarea>
+					
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="150" class="form-control" rows="3" name="name" placeholder="Name of the object">
+
+					<label for="dimensions">Dimensions:</label>
+					<textarea class="form-control" maxlength="25" rows="1" name="dimensions" placeholder="h x w x d"></textarea>
+
+					<label for="mount">Mount:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" value="WALL CLUTCH">WALL CLUTCH
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" value="WALL MOUNT">WALL MOUNT
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" value="ANTI WALKER">ANTI WALKER
+					  </label>
+					</div>
+
+					<label for="misc">Misc:</label>
+					<input type ="text" maxlength="150" class="form-control" rows="1" name="misc" placeholder="Misc info">
+
+					<button type="submit" class="btn btn-default" id="submit">
+					<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+

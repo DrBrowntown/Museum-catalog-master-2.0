@@ -1,0 +1,86 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+    
+    <div class="row divider green">
+        <div class="col-md-12"></div>
+    </div>
+    <div class="row banner object">
+        <div class="col-md-11 col-md-offset-1 padding-none">
+            <h1>{{ zone.name }}
+            
+            </h1>
+
+        </div>
+    </div>
+    <div class="row padding-top padding-bottom">
+        <div class="col-md-1"></div>
+        <div class="col-md-11 padding-none">
+            
+        </div>
+        <div class="col-md-7"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                             <li> <strong> {{ message }} </strong> </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+    {% if objects !=[] %} 
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <h2>WALL CLUTCH</h2>
+                    {% for i in objects %}
+                        {% if i.mount == 'WALL CLUTCH' %}
+                            <div class="object-item">
+                                <h3>{{i.extension}}</h3>
+                                <p>{{i.name}}</p>
+                                <p class="object-dim">{{i.dimensions}}</p>
+                                
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            <div class="col-md-4">          
+                <h2>WALL MOUNT</h2>
+                    {% for i in objects %}
+                        {% if i.mount == 'WALL MOUNT' %}
+                            <div class="object-item">
+                                <h3>{{i.extension}}</h3>
+                                <p>{{i.name}}</p>
+                                <p class="object-dim">{{i.dimensions}}</p>
+                                
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            <div class="col-md-3">
+                <h2>ANTI WALKER</h2>
+                     {% for i in objects %}
+                        {% if i.mount == 'ANTI WALKER' %}
+                            <div class="object-item">
+                                <h3>{{i.extension}}</h3>
+                                <p>{{i.name}}</p>
+                                <p class="object-dim">{{i.dimensions}}</p>
+                                
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                
+            </div>
+            
+            <div class="col-md-1"></div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+

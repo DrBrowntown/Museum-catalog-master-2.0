@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner object">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit Object</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type ="text" maxlength="150" class="form-control" rows="3" name="name" value="{{object.name }}">
+
+					<label for="dimensions">Dimensions:</label>
+					<textarea class="form-control" maxlength="25" rows="1" name="dimensions">{{object.dimensions}}</textarea>
+
+					<label for="extension">Extension:</label>
+					<textarea class="form-control" maxlength="15" rows="1" name="extension">{{object.extension}}</textarea>
+
+					<label for="accession">Accession:</label>
+					<textarea class="form-control" maxlength="15" rows="1" name="accession">{{object.accession}}</textarea>
+					
+					<label for="mount">Mount:</label>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" id="mount1" value="WALL CLUTCH" {% if object.mount == 'WALL CLUTCH'%}checked{%endif%}>WALL CLUTCH
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" id="mount2" value="WALL MOUNT" {% if object.mount == 'WALL MOUNT' %}checked{%endif%}>WALL MOUNT
+					  </label>
+					</div>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="mount" id="mount3" value="ANTI WALKER" {% if object.mount == 'ANTI WALKER'%}checked{%endif%}>ANTI WALKER
+					  </label>
+					</div>
+
+					<label for="misc">Misc info:</label>
+					<input type ="text" maxlength="150" class="form-control" rows="3" name="misc" value="{{object.misc }}">
+
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+					<a href = '{{url_for('showZones')}}'>
+						<button class="btn btn-default delete">
+						<span type="button" class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+					</a>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
