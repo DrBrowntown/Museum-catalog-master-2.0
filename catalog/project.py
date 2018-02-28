@@ -28,7 +28,7 @@ APPLICATION_NAME = "Museum Curation Application"
 
 
 # Connect to Database and create database session
-engine = create_engine('postgresql:///catalog:catalog@localhost/catalog')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -303,6 +303,10 @@ def zonesJSON():
     zones = session.query(Zone).all()
     return jsonify(zones=[r.serialize for r in zones])
 
+# Show privacy page
+@app.route('/privacy/')
+def privacyPage():
+    return render_template('privacy.html')
 
 # Show all zones
 @app.route('/')
