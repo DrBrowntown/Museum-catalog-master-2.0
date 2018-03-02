@@ -4,8 +4,6 @@ Starter Code for Auth&amp;Auth course
 
 **Note: If you already have a vagrant machine installed from previous Udacity courses skip to the 'Fetch the Source Code and VM Configuration' section**
 
-
-
 We're using the Vagrant software to configure and manage the VM. Here are the tools you'll need to install to get it running:
 
 ### Git
