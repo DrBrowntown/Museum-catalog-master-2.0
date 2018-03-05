@@ -25,8 +25,8 @@ User1 = User(username="Calvin Brownlee", email="calvo115@hotmail.com",
 session.add(User1)
 session.commit()
 
-# Objects in C5 19th C. Tiffany Silver in Luce
-zoneC5 = Zone(user_id=1, name="19th C. Tiffany Silver in Luce")
+# Objects in C5 19th C. Tiffany Silver in 
+zoneC5 = Zone(user_id=1, name="19th C. Tiffany Silver")
 
 session.add(zoneC5)
 session.commit()
@@ -52,7 +52,7 @@ object3 = Object(user_id=1, extension="4EC5.3", accession="INV.774a-c",
 session.add(object3)
 session.commit()
 
-zoneC6 = Zone(user_id=1, name="20th C. Tiffany Silver in Luce")
+zoneC6 = Zone(user_id=1, name="20th C. Tiffany Silver")
 
 session.add(zoneC6)
 session.commit()
@@ -78,7 +78,7 @@ object3 = Object(user_id=1, extension="4EC5.3", accession="INV.774a-c",
 session.add(object3)
 session.commit()
 
-zoneC7 = Zone(user_id=1, name="21st C. Tiffany Silver in Luce")
+zoneC7 = Zone(user_id=1, name="21st C. Tiffany Silver")
 
 session.add(zoneC7)
 session.commit()
