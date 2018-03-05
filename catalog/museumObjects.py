@@ -124,8 +124,8 @@ object6 = Object(user_id=1, extension="4EC5.6", accession="INV.774a-c",
 
 session.add(object6)
 session.commit()
-# Menu for Super Stir Fry
 
 
 
-print ("added menu items!")
+
+print ("added museum objects!")

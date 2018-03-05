@@ -23,7 +23,7 @@ auth = HTTPBasicAuth()
 app = Flask(__name__)
 
 CLIENT_ID = json.loads(
-    open('/var/www/museum-catalog/museum-catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
+    open('/var/www/museum-catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Museum Curation Application"
 
 
@@ -153,7 +153,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('/var/www/museum-catalog/museum-catalog/catalog/client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets('/var/www/museum-catalog/catalog/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:
