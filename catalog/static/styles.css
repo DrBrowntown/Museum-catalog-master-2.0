@@ -105,7 +105,7 @@ h3 {
 }
 .banner.main {
 	height: 450px;
-/*	background: url("/static/nyhs-front.jpg");*/
+	background: url("/static/museum.jpeg");
 	background-position: right;
 	background-repeat: no-repeat;
 	background-size: cover;
