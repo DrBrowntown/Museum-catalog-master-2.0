@@ -1,12 +1,12 @@
 * {
-	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-family: 'Quattrocento', serif;
 	font-weight: 700;
 }
 
 h1 {
-	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
-	font-size: 50px;
-	color: brown;
+	
+	font-size: 85px;
+	color: white;
 	line-height: 60px;
 	font-weight: 300;
 	text-shadow:
@@ -28,7 +28,7 @@ h3 {
 	line-height: 23px;
 }
  p {
- 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	
  	font-size: 16px;
  	color: #7B7573;
  	line-height: 24px;
@@ -97,8 +97,8 @@ h3 {
 .divider {
 	height: 15px;
 }
-.divider.blue {
-	background-color: #42C3C9;
+.divider.red {
+	background-color: #8e1923;
 }
 .divider.green {
 	background-color: #6496e5;
@@ -170,4 +170,7 @@ u }
 .blur {
   -webkit-filter: blur(2px);
   filter: blur(2px);
+}
+.container {
+	justify-items: center;
 }

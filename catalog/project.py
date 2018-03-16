@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 auth = HTTPBasicAuth()
 app = Flask(__name__)
-# 
+# /var/www/museum-catalog/catalog/
 CLIENT_ID = json.loads(
     open('/var/www/museum-catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Museum Curation Application"
@@ -153,7 +153,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        # 
+        # /var/www/museum-catalog/catalog/
         oauth_flow = flow_from_clientsecrets('/var/www/museum-catalog/catalog/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
@@ -392,7 +392,6 @@ def showObjects(zone_id):
 
 
 # Create a new object
-
 @app.route('/zone/<int:zone_id>/object/new/', methods=['GET', 'POST'])
 def newObject(zone_id):
     if 'username' not in login_session:
